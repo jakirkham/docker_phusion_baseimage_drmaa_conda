@@ -2,6 +2,7 @@ FROM phusion/baseimage:0.9.16
 MAINTAINER John Kirkham <jakirkham@gmail.com>
 
 RUN useradd -m -s /bin/bash -g sudo user
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 USER user
 WORKDIR /home/user
 
