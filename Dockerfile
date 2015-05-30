@@ -2,6 +2,8 @@ FROM phusion/baseimage:0.9.16
 MAINTAINER John Kirkham <jakirkham@gmail.com>
 
 
+RUN apt-get update -y && apt-get install -y sudo
+
 RUN useradd -m -s /bin/bash -g sudo user
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
