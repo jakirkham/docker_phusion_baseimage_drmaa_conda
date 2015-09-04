@@ -3,3 +3,9 @@
 # Purpose
 
 In order to provide a simple portable test environment for Grid Engine, this repo contains what is necessary to build a Ubuntu 14 based image using Docker. In particular, this version of Ubuntu is modified to have and use a proper `init` process and a few other features as is described here ( <http://phusion.github.io/baseimage-docker> ). In addition, it provides a copy of [`binstar`]( http://binstar-client.readthedocs.org/en/latest/index.html ) and [`conda`]( http://conda.pydata.org/ ) with some extensions for building.
+
+# Building
+
+## Automatic
+
+This repo is part of an automated build, which is hosted on Docker Hub ( <https://registry.hub.docker.com/u/jakirkham/phusion_baseimage_drmaa_conda> ). Changes added to this trigger an automatic rebuild and deploy the resulting image to Docker Hub. To download an existing image, one simply needs to run `docker pull jakirkham/phusion_baseimage_drmaa_conda`.
