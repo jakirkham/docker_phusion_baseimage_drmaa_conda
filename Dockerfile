@@ -21,5 +21,5 @@ ENV PATH=/opt/conda/bin:$PATH \
 
 ADD docker /usr/share/docker
 
-ENTRYPOINT [ "/usr/share/docker/entrypoint.sh" ]
+ENTRYPOINT [ "/sbin/my_init", "--", "/usr/share/docker/entrypoint.sh" ]
 CMD [ "/bin/bash" ]
